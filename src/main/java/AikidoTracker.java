@@ -8,7 +8,7 @@ public class AikidoTracker {
     private String name;
     private int sessions;
     private Calendar calendar;
-    private Map session = new HashMap<String, Integer>();
+    private Map<String, Integer> session = new HashMap<String, Integer>();
 
 
     public AikidoTracker(String name){
@@ -29,7 +29,7 @@ public class AikidoTracker {
         return false;
     }
 
-    public void addSession(String date, String time){
+    public void addSession(String date, int time){
         this.session.put(date, time);
         this.sessions++;
     }
@@ -39,8 +39,8 @@ public class AikidoTracker {
     }
     public int getTotalTime(){
         int total = 0;
-        for(Object time : this.session.values()){
-            total += (int)time;
+        for (int time : this.session.values()){
+            total += time;
         }
         return total;
 
