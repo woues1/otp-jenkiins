@@ -45,5 +45,13 @@ public class AikidoTracker {
 <span class="fc" id="L45">        return total;</span>
 
     }
+
+    public static void main(String[] args) {
+<span class="nc" id="L50">        AikidoTracker aikidoTracker = new AikidoTracker(&quot;John Doe&quot;);</span>
+<span class="nc" id="L51">        System.out.println(aikidoTracker.isEligibleForKyu());</span>
+<span class="nc" id="L52">        aikidoTracker.addSession(&quot;2021-01-01&quot;, 60);</span>
+<span class="nc" id="L53">        aikidoTracker.advanceDate(6);</span>
+<span class="nc" id="L54">        System.out.println(aikidoTracker.getTotalTime());</span>
+<span class="nc" id="L55">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

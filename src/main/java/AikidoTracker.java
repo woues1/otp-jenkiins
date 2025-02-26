@@ -45,4 +45,12 @@ public class AikidoTracker {
         return total;
 
     }
+
+    public static void main(String[] args) {
+        AikidoTracker aikidoTracker = new AikidoTracker("John Doe");
+        System.out.println(aikidoTracker.isEligibleForKyu());
+        aikidoTracker.addSession("2021-01-01", 60);
+        aikidoTracker.advanceDate(6);
+        System.out.println(aikidoTracker.getTotalTime());
+    }
 }

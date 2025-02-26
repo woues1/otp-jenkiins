@@ -1,6 +1,6 @@
 
 FROM openjdk:21
 WORKDIR /app
-COPY target/*.jar app.jar
-ENTRYPOINT ["java", "-jar", "app.jar"]
+COPY target/AikidoTracker.jar AikidoTracker.jar
+ENTRYPOINT ["java", "-jar", "AikidoTracker.jar"]
 
