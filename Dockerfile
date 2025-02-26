@@ -1,13 +1,6 @@
-FROM maven:latest
 
-LABEL authors="tonih"
-
+FROM openjdk:21
 WORKDIR /app
+COPY target/*.jar app.jar
+ENTRYPOINT ["java", "-jar", "app.jar"]
 
-COPY pom.xml /app/
-
-COPY . /app/
-
-RUN mvn package
-
-ENTRYPOINT ["Java", "-jar", "target/laskin.jar"]
